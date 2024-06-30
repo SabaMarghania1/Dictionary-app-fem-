@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --bold-text: #2d2d2d;
+
+  --text-light: #757575;
+  --purple: #a445ed;
+
+  --bg-color: #fff;
+}
+
+[data-theme='dark'] {
+  --bold-text: #fff;
+
+  --bg-color: #050505;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
