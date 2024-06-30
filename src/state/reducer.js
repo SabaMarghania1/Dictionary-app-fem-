@@ -1,6 +1,11 @@
 export const initialState = {
   theme: '',
   fontFamily: 'Sans-serif',
+  query: '',
+  data: {},
+  arrived: false,
+  submitted: false,
+  error: {},
 };
 
 export function reducer(state, action) {
@@ -20,6 +25,17 @@ export function reducer(state, action) {
         ...state,
         fontFamily: action.payload,
       };
+    case 'SET_QUERY':
+      return {
+        ...state,
+        query: action.payload,
+        submitted: false,
+        error: {querryError: '', notFound: state.error.notFound},
+      };
+    case 'SEARCH':
+      return {...state, data: action.payload, submitted: true, error: {}};
+    case 'ERROR':
+      return {...state, error: action.payload, data: {}};
     default:
       return state;
   }
