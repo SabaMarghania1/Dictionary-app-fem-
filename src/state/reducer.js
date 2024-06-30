@@ -1,6 +1,6 @@
 export const initialState = {
   theme: '',
-  fontFamily: 'sans-serif',
+  fontFamily: 'Sans-serif',
 };
 
 export function reducer(state, action) {
@@ -11,6 +11,14 @@ export function reducer(state, action) {
       return {
         ...state,
         theme: newTheme,
+      };
+    case 'CHANGE_FONT_FAMILY':
+      if (action.payload === 'mono') {
+        return {...state, fontFamily: 'Space-Mono'};
+      }
+      return {
+        ...state,
+        fontFamily: action.payload,
       };
     default:
       return state;

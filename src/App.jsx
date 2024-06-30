@@ -6,7 +6,7 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <div className="app">
+    <div className="app" style={{fontFamily: state.fontFamily}}>
       <Header state={state} dispatch={dispatch} />
     </div>
   );

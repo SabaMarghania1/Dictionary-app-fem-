@@ -11,7 +11,7 @@ export default function Header({state, dispatch}) {
         <img src={logo} alt="logo" />
       </div>
       <div className="header__right">
-        <FontChanger state={state} />
+        <FontChanger state={state} dispatch={dispatch} />
         <ThemeChanger state={state} dispatch={dispatch} />
       </div>
     </header>

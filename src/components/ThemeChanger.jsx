@@ -1,5 +1,4 @@
-import React from 'react';
-import '../slider.css'; // Make sure this path is correct based on your project structure
+import '../slider.css';
 import IconMoon from '../assets/icon-moon.svg';
 
 export default function ThemeChanger({state, dispatch}) {
