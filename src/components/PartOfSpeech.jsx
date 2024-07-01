@@ -17,7 +17,7 @@ export default function PartOfSpeech({data, sourceUrls}) {
                 <li key={definition.definition} className="speech__list-item">
                   {definition.definition}
                   <p key={definition.example} className="example">
-                    {definition.example}
+                    “{definition.example}”
                   </p>
                 </li>
               </>

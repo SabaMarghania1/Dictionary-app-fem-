@@ -269,7 +269,7 @@ input {
   height: 5px;
   background: #8f19e8;
   border-radius: 50%;
-  top: 5px;
+  top: 9px;
   left: 1px;
 }
 
@@ -286,6 +286,7 @@ input {
 .synonyms__list-item {
   color: var(--purple);
   list-style: none;
+  font-weight: 700;
 }
 
 .example {
@@ -308,4 +309,91 @@ input {
   display: flex;
   gap: 10px;
   color: var(--bold-text);
+}
+
+.example {
+  color: #797979;
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    padding: 0 40px;
+  }
+
+  .custom__select {
+    font-size: 18px;
+  }
+
+  .header {
+    margin-top: 58px;
+    margin-bottom: 51.5px;
+  }
+
+  input {
+    padding: 19px 24px;
+    font-size: 20px;
+  }
+
+  .word {
+    font-size: 64px;
+  }
+
+  .phonetic {
+    font-size: 24px;
+  }
+
+  .information__container-top {
+    margin-bottom: 39px;
+  }
+
+  .information__container-right {
+    width: 75px;
+    height: 75px;
+  }
+
+  .information__container-right img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .speech__header {
+    font-size: 24px;
+  }
+
+  .part-of-speech__content {
+    padding: 40px 0;
+  }
+
+  .meaning-title {
+    font-size: 20px;
+  }
+
+  .speech__list-item {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+  .speech__list-item::before {
+    left: 18px;
+  }
+
+  .speech__list {
+    margin-bottom: 40px;
+  }
+
+  .synonyms__title {
+    font-size: 20px;
+  }
+
+  .synonyms__list-item {
+    font-size: 20px;
+  }
+
+  .source__urls {
+    display: flex;
+    gap: 20px;
+  }
+
+  .source__urls h4 {
+    margin-bottom: 0;
+  }
 }

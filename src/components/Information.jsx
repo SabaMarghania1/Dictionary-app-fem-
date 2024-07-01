@@ -43,7 +43,6 @@ export default function Information({data, errors}) {
               {sourceUrls[0]}
               <span>
                 <img src={iconNew} alt="icon" />
-                {}
               </span>
             </a>
           </div>
