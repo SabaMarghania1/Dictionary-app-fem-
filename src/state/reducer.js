@@ -30,12 +30,24 @@ export function reducer(state, action) {
         ...state,
         query: action.payload,
         submitted: false,
+        arrived: false,
         error: {querryError: '', notFound: state.error.notFound},
       };
     case 'SEARCH':
-      return {...state, data: action.payload, submitted: true, error: {}};
+      return {
+        ...state,
+        data: action.payload,
+        submitted: true,
+        arrived: true,
+        error: {},
+      };
     case 'ERROR':
-      return {...state, error: action.payload, data: {}};
+      return {
+        ...state,
+        error: action.payload,
+        data: {},
+        arrived: false,
+      };
     default:
       return state;
   }

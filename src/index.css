@@ -182,6 +182,7 @@ input {
 /* Information */
 .information__container {
   margin-top: 23px;
+  width: 100%;
 }
 
 .button-audio {
@@ -191,6 +192,7 @@ input {
 .information__container-top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 31px;
 }
 .information__container-left {
   display: flex;
@@ -216,4 +218,94 @@ input {
 .phonetic {
   font-size: 18px;
   color: var(--purple);
+}
+
+/* speech component */
+.information__container-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #3a3a3a;
+}
+
+.part-of-speech__header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.part-of-speech__header h3 {
+  color: var(--bold-text);
+}
+
+.part-of-speech__content {
+  padding: 34px 0;
+}
+
+.speech__list {
+  display: flex;
+  gap: 13px;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.speech__list-item {
+  list-style: none;
+  position: relative;
+  padding-left: 27px;
+  font-size: 15px;
+  color: var(--bold-text);
+  line-height: 24px;
+}
+
+.speech__list-item::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #8f19e8;
+  border-radius: 50%;
+  top: 5px;
+  left: 1px;
+}
+
+.meaning-title {
+  margin-bottom: 17px;
+}
+
+.synonyms {
+  display: flex;
+  gap: 39px;
+  list-style: none;
+}
+
+.synonyms__list-item {
+  color: var(--purple);
+  list-style: none;
+}
+
+.example {
+  margin-top: 13px;
+}
+
+.source__urls {
+  border-top: 1px solid #3a3a3a;
+  padding: 26px 0 63px;
+}
+
+.source__urls h4 {
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.source__urls a {
+  display: flex;
+  gap: 10px;
+  color: var(--bold-text);
 }

@@ -11,11 +11,14 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    fetch('https://api.dictionaryapi.dev/api/v2/entries/en/keyboard').then(res => {
-      return res.json().then(data => {
+    fetch('https://api.dictionaryapi.dev/api/v2/entries/en/keyboard')
+      .then(res => res.json())
+      .then(data => {
         dispatch({type: 'SEARCH', payload: data});
+      })
+      .catch(error => {
+        dispatch({type: 'ERROR', payload: {notFound: 'Data not found'}});
       });
-    });
   }, []);
 
   return (
@@ -28,9 +31,11 @@ const App = () => {
           <p className="error">Whoops, query can't be empty...</p>
         )}
 
-        {state.error.notFound && <NotFound error={state.error.notFound} />}
-
-        {!state.error.notFound && <Information data={state.data[0] || []} errors={state.error} />}
+        {state.error.notFound ? (
+          <NotFound error={state.error.notFound} />
+        ) : (
+          state.arrived && <Information data={state.data[0]} errors={state.error} />
+        )}
       </Main>
     </div>
   );
